@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock %}
+{% block css %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+    {% for article in articles %}
+    <div class="col">
+        <ul>
+            <li><a href="{{ url_for('author.get_article', pk=article) }}">
+                {{ articles[article]['text']}}<br>
+            </a>
+            </li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

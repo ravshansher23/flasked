@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock %}
+{% block css %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<ul>
+    <li>
+        {{ article['text']}}<br>
+        Author:{{ author }}
+    </li>
+</ul>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
